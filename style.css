@@ -1,0 +1,167 @@
+:root{
+    --form-baground:#122241be;
+    --font-color: #ffff;
+    --input-baground: #0F1B33;
+    --select-baground:#855373;
+    --button-baground:#AC7799;
+}
+
+*{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Rationale', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url("./assets/img/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.main{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 15% 45% 40%;
+    justify-content: center;
+    place-items: center;
+}
+
+.main .title-main{
+    font-size: 4rem;
+    font-weight: bolder;
+    color: var(--font-color);
+}
+
+.main .form{
+    background:var(--form-baground);
+    width: 110%;
+    height: 100%;
+    border-radius: 15px;
+
+    display: grid;
+    grid-row: 1fr 1fr;
+    justify-items: center;
+}
+
+.form-container-row-1{
+    grid-row: 1/2;
+    display: grid;
+    place-items: center;
+}
+
+.form-container-row-2{
+    height: 100%;
+    grid-row: 2/3;
+    display: grid;
+    align-items: start;
+    grid-template-rows: 30% 30% 30%;
+    justify-items: center;
+    align-items: start;
+    
+}
+
+.main .form .form-label.row2{
+    
+}
+
+.main .form .form-label{
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--font-color);
+    text-align: center;
+    line-height: 3.5rem;
+    
+}
+
+.form-input{
+    
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    border-radius: 50px;
+    background: var(--input-baground);
+    align-self: start;
+
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Rationale', sans-serif;
+    color: var(--font-color);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+.form-select{
+    width: 60%;
+    height: 30px;
+    border-radius: 4px;
+    background: var(--select-baground);
+    
+    text-align: center;
+    color: var(--font-color);
+    font-size: 2rem;
+    font-family: 'Rationale', sans-serif;
+
+}
+
+.form-button{
+    grid-row: 3/4;
+    width: 40%;
+    height: 30px;
+    border-radius: 4px;
+    background: var(--button-baground);
+
+    font-size: 2rem;
+    color: var(--font-color);
+    font-family: 'Rationale', sans-serif;
+}
+
+.main-end{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.main-end-img{
+    width: 64%;
+    object-fit: contain;
+
+    animation:img 5s linear infinite;
+}
+
+@keyframes img {
+    25%{
+        transform: rotateZ(90deg);
+    }
+    50%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+
+.main-end-p{
+    position: absolute;
+    font-size: 4rem;
+    color: var(--font-color);
+    font-weight: 500;
+}
